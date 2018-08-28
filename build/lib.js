@@ -1,3 +1,8 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 // TODO add comment with problem description
 /*
 
@@ -23,29 +28,29 @@ list([])
 //   list
 // }
 
-export const list = names => {
-  let str = ''
+var list = exports.list = function list(names) {
+  var str = '';
 
   if (names.length === 1) {
-    str += names[0].name
+    str += names[0].name;
   }
 
   if (names.length === 2) {
-    str += `${names[0].name} & ${names[1].name}`
+    str += names[0].name + ' & ' + names[1].name;
   }
 
   if (names.length > 2) {
-    names.map((c, i) => {
+    names.map(function (c, i) {
       if (i === names.length - 1) {
-        str += c.name
+        str += c.name;
       } else if (i === names.length - 2) {
-        str += `${c.name} & `
+        str += c.name + ' & ';
       } else {
-        str += `${c.name}, `
+        str += c.name + ', ';
       }
-    })
+    });
   }
-  return str
-}
+  return str;
+};
 
 // TODO add solution function and export it

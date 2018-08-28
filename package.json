@@ -1,31 +1,24 @@
 {
-  "name": "js-assignment-codewarspresentation",
+  "name": "vs",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/wmarttala/js-assignment-codewarspresentation.git",
+  "description": "Day 1 JS Notes",
+  "main": "build/index.js",
   "scripts": {
-    "prestart": "babel src -d lib",
-    "start": "node lib/index.js"
+    "build": "babel src/ -d build/",
+    "prestart": "npm run build",
+    "start": "node ."
   },
-  "devDependencies": {
+  "author": "J",
+  "license": "ISC",
+  "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.2.1",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "standard": "^10.0.3"
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
   },
   "babel": {
     "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": "current"
-          },
-          "useBuiltIns": true
-        }
-      ],
-      "stage-0"
+      "stage-0",
+      "env"
     ]
-  },
+  }
 }
